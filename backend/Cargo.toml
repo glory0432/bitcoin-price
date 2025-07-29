@@ -1,0 +1,22 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+axum = {version = "0.8.4", features = ["ws"]}
+chrono = "0.4.41"
+futures-util = "0.3.31"
+lazy_static = "1.5.0"
+reqwest = { version = "0.12.22", features = ["json"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.141"
+sqlx = { version = "0.8.6", features = ["runtime-tokio-rustls", "macros", "chrono", "postgres"] }
+tokio = { version = "1.46.1", features = ["full"] }
+tower-http = { version = "0.6.6", features = ["fs", "trace", "cors"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = [
+    "registry",
+    "env-filter"
+]}
